@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="background">    
     <Nav />
-    <b-container >
+    <b-container class="center-form">
       <b-row>
         <Personal @update:personal-info="updatePersonal" />
       </b-row>
@@ -35,5 +35,13 @@ export default {
 <style>
   .background {
     background-color: grey;
+  }
+
+  .center-form {
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
   }
 </style>

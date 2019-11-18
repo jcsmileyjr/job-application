@@ -29,7 +29,7 @@
             <b-form-row class="input-form">
                 <b-col><label class="bold-label">Email</label></b-col>
                 <b-col><input type="text" v-model="personalData.homeEmail" /></b-col>
-                <b-col><label class="example-label">Ex. best@hero.com</label></b-col>
+                <b-col><label class="example-label smallEmail">best@hero.com</label></b-col>
             </b-form-row> 
             <b-form-row class="input-form">
                 <b-col><label class="bold-label">College Degree</label></b-col>
@@ -93,5 +93,11 @@ export default {
         background-color: white;
         padding: 2rem;
         margin-bottom: 1rem;
+    }
+
+    @media only screen and (max-width: 500px) {
+        .smallEmail {
+            font-size: .8rem;
+        }
     }
 </style>
