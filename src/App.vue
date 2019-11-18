@@ -37,6 +37,12 @@ export default {
     background-color: grey;
   }
 
+  @media only screen and (max-width: 550px) {
+    .background {
+        background-color:white;
+    }
+  }
+
   .center-form {
     display: flex;
         flex-direction: column;

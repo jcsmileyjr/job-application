@@ -38,4 +38,11 @@ export default {
         margin-bottom: 1rem;
         background-color: white;
     }
+
+  @media only screen and (max-width: 550px) {
+    .nav-bar {
+        background-color:lightgrey;
+        color: black;
+    }
+  }    
 </style>
