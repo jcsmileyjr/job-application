@@ -1,8 +1,10 @@
 <template>
-  <div id="app">    
+  <div id="app" class="background">    
     <Nav />
-    <b-container>
-      <Personal @update:personal-info="updatePersonal" />
+    <b-container >
+      <b-row>
+        <Personal @update:personal-info="updatePersonal" />
+      </b-row>
     </b-container>    
   </div>
 </template>
@@ -31,5 +33,7 @@ export default {
 </script>
 
 <style>
-  
+  .background {
+    background-color: grey;
+  }
 </style>

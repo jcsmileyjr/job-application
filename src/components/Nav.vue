@@ -1,9 +1,9 @@
 <template class="container">
-    <b-container fluid>
-        <b-row id="nav-section">
-            <b-col>Front-End Job Application</b-col>
+    <b-container fluid >
+        <b-row id="nav-section" class="nav-bar">
+            <b-col class="bold-label">Front-End Job Application</b-col>
             <b-col>Section: Personal</b-col>
-            <b-col>1 of 3</b-col>
+            <b-col class="bold-label">1 of 3</b-col>
         </b-row>        
     </b-container>
 </template>
@@ -26,5 +26,16 @@ export default {
 
     li {
         float: left;
+    }
+
+    .bold-label {
+        font-weight:bold;
+    }
+
+    .nav-bar {
+        height: 3rem;
+        border-bottom: 1px solid black;
+        margin-bottom: 1rem;
+        background-color: white;
     }
 </style>
