@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div id="app">    
     <Nav />
-    <Content />
+    <Content />    
   </div>
 </template>
 
@@ -14,6 +14,11 @@ export default {
   components: {
     Nav,
     Content,
+  },
+  data(){
+    return{
+      fullname:"",
+    }
   }
 }
 </script>

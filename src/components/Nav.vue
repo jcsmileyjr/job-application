@@ -1,9 +1,11 @@
 <template class="container">
-    <section id="nav-section" class="row">
-        <div class="col-sm">Frontend Full Stack Job Application</div>
-        <div class="col-sm">Section: Personal</div>
-        <div class="col-sm ">1 of 3</div>        
-    </section>
+    <b-container fluid>
+        <b-row id="nav-section">
+            <b-col>Front-End Job Application</b-col>
+            <b-col>Section: Personal</b-col>
+            <b-col>1 of 3</b-col>
+        </b-row>        
+    </b-container>
 </template>
 
 <script>

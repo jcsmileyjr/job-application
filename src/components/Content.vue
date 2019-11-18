@@ -1,24 +1,24 @@
 <template>
-    <section id="content-section">
-        <div id="work-area">
-            <InputForm title="Full Name"  example="John Smith" />
-        </div>
-    </section>
+    <b-container fluid id="content-section">
+        <b-row>
+            <Personal />
+        </b-row>
+    </b-container>
 </template>
 
 <script>
-import InputForm from '@/components/Input-Form.vue';
+import Personal from '@/components/Personal.vue';
 
 export default {
     name:"content-section",
     components:{
-        InputForm,
+        Personal,
     }    
 }
 </script>
 
 <style scoped>
-
+/*
     #content-section {
         display: flex;
         flex-direction: column;
@@ -28,10 +28,9 @@ export default {
         background-color:#6A5555;
     }
     #work-area {
-        
-        
         background-color: white;
         height: 80vh;
         width: 100vh;
     }
+    */
 </style>
