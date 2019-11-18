@@ -1,23 +1,30 @@
 <template>
   <div id="app">    
     <Nav />
-    <Content />    
+    <b-container>
+      <Personal @update:personal-info="updatePersonal" />
+    </b-container>    
   </div>
 </template>
 
 <script>
 import Nav from '@/components/Nav.vue';
-import Content from '@/components/Content.vue';
+import Personal from '@/components/Personal.vue';
 
 export default {
   name: 'app',
   components: {
     Nav,
-    Content,
+    Personal,
   },
   data(){
     return{
-      fullname:"",
+      peronalData:{},
+    }
+  },
+  methods:{
+    updatePersonal(data){
+      this.peronalData = data;
     }
   }
 }
