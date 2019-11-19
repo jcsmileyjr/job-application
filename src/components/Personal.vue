@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div fluid id="personal">
+        <div id="personal">
             <b-form-row class="input-form">
                 <b-col><label class="bold-label">Full Name</label></b-col>
                 <b-col><input type="text" v-model="personalData.fullName" /></b-col>
