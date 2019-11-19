@@ -1,11 +1,11 @@
-<template>
-    <div id="nav-section">
-        <ul class="horizontal-navbar">
-            <li>Frontend Full Stack Job Application</li>
-            <li>Section: Personal</li>
-            <li>1 of 3</li>
-        </ul>
-    </div>
+<template class="container">
+    <b-container fluid >
+        <b-row id="nav-section" class="nav-bar">
+            <b-col class="bold-label">Front-End Job Application</b-col>
+            <b-col>Section: Personal</b-col>
+            <b-col class="bold-label">1 of 3</b-col>
+        </b-row>        
+    </b-container>
 </template>
 
 <script>
@@ -27,4 +27,22 @@ export default {
     li {
         float: left;
     }
+
+    .bold-label {
+        font-weight:bold;
+    }
+
+    .nav-bar {
+        height: 3rem;
+        border-bottom: 1px solid black;
+        margin-bottom: 1rem;
+        background-color: white;
+    }
+
+  @media only screen and (max-width: 550px) {
+    .nav-bar {
+        background-color:lightgrey;
+        color: black;
+    }
+  }    
 </style>
