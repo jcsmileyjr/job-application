@@ -4,6 +4,7 @@
     <b-container class="center-form">
       <b-row>
         <Personal @update:personal-info="updatePersonal" />
+        <Work @update:work-info="updateWork" />
       </b-row>
     </b-container>    
   </div>
@@ -12,21 +13,28 @@
 <script>
 import Nav from '@/components/Nav.vue';
 import Personal from '@/components/Personal.vue';
+import Work from '@/components/Work.vue';
 
 export default {
   name: 'app',
   components: {
     Nav,
     Personal,
+    Work,
   },
   data(){
     return{
       peronalData:{},
+      workData:{},
     }
   },
   methods:{
     updatePersonal(data){
       this.peronalData = data;
+    },
+
+    updateWork(data){
+      this.workData = data;
     }
   }
 }
