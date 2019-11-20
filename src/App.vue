@@ -2,10 +2,10 @@
   <div id="app" class="background">    
     <Nav />
     <b-container class="center-form">
-      <b-row>
-        <Personal @update:personal-info="updatePersonal" />
-        <Work @update:work-info="updateWork" />
+      <b-row v-if="currentView ==='personal'">
+        <Personal @update:personal-info="updatePersonal" />  
       </b-row>
+      <b-row v-if="currentView ==='work'"><Work @update:work-info="updateWork" /></b-row>
     </b-container>    
   </div>
 </template>
@@ -26,6 +26,7 @@ export default {
     return{
       peronalData:{},
       workData:{},
+      currentView:"work",
     }
   },
   methods:{

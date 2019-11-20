@@ -1,6 +1,6 @@
 <template>
     <section>
-        <dev id="Work">
+        <div id="work">
             <b-form-row class="input-form">
                 <b-col><label class="bold-label">Company Name</label></b-col>
                 <b-col><input type="text" v-model="workData.jobName" /></b-col>
@@ -19,7 +19,7 @@
             <b-form-row class="input-form">
                 <b-col><label class="bold-label">Company Zip Code</label></b-col>
                 <b-col><input type="text" v-model="workData.jobZipCode" /></b-col>
-                <b-col><label class="example-label">01010/label></b-col>
+                <b-col><label class="example-label">01010</label></b-col>
             </b-form-row>              
             <b-form-row class="input-form">
                 <b-col><label class="bold-label">Job Title</label></b-col>
@@ -39,7 +39,7 @@
             <div class="centerButton">
                 <b-button variant="success" type="submit" size="sm" @click="updateState">Continue</b-button>
             </div>              
-        </dev>
+        </div>
     </section>
 </template>
 
