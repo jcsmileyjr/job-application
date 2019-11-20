@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="background">    
-    <Nav />
+    <Nav v-bind:section="this.currentView" v-bind:completed="this.pages" />
     <b-container class="center-form">
       <b-row v-if="currentView ==='personal'">
         <Personal @update:personal-info="updatePersonal" />  
@@ -27,6 +27,7 @@ export default {
       peronalData:{},
       workData:{},
       currentView:"work",
+      pages:2,
     }
   },
   methods:{
