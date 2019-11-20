@@ -2,15 +2,16 @@
     <b-container fluid >
         <b-row id="nav-section" class="nav-bar">
             <b-col class="bold-label">Front-End Job Application</b-col>
-            <b-col>Section: Personal</b-col>
-            <b-col class="bold-label">1 of 3</b-col>
+            <b-col>Section: {{section.toUpperCase()}}</b-col>
+            <b-col class="bold-label">{{completed}} of 3</b-col>
         </b-row>        
     </b-container>
 </template>
 
 <script>
 export default {
-    name:"nav-section"
+    name:"nav-section",
+    props:['section', 'completed'],
 }
 </script>
 
@@ -19,7 +20,6 @@ export default {
         display: inline-block;
 
     }
-
     ul {
         list-style-type: none;
     }

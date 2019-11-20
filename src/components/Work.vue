@@ -1,27 +1,70 @@
 <template>
     <section>
-        <dev id="Work">
+        <div id="work">
             <b-form-row class="input-form">
-                <b-col><label class="bold-label">Full Name</label></b-col>
-                <b-col><input type="text" v-model="personalData.fullName" /></b-col>
-                <b-col><label class="example-label">Ex. John Smith</label></b-col>
+                <b-col><label class="bold-label">Company Name</label></b-col>
+                <b-col><input type="text" v-model="workData.jobName" /></b-col>
+                <b-col><label class="example-label">Coders Delight</label></b-col>
+            </b-form-row>    
+            <b-form-row class="input-form">
+                <b-col><label class="bold-label">Company Address</label></b-col>
+                <b-col><input type="text" v-model="workData.jobAddress" /></b-col>
+                <b-col><label class="example-label">Coders Bay</label></b-col>
             </b-form-row>
             <b-form-row class="input-form">
-                <b-col><label class="bold-label">Full Name</label></b-col>
-                <b-col><input type="text" v-model="personalData.fullName" /></b-col>
-                <b-col><label class="example-label">Ex. John Smith</label></b-col>
-            </b-form-row>            
+                <b-col><label class="bold-label">Company City</label></b-col>
+                <b-col><input type="text" v-model="workData.jobCity" /></b-col>
+                <b-col><label class="example-label">Coders</label></b-col>
+            </b-form-row>    
             <b-form-row class="input-form">
-                <b-col><label class="bold-label">College Degree</label></b-col>
-                <b-col><input type="text" v-model="personalData.homeDegree" /></b-col>
-                <b-col><label class="example-label">Ex. Computer Science</label></b-col>
+                <b-col><label class="bold-label">Company Zip Code</label></b-col>
+                <b-col><input type="text" v-model="workData.jobZipCode" /></b-col>
+                <b-col><label class="example-label">01010</label></b-col>
+            </b-form-row>              
+            <b-form-row class="input-form">
+                <b-col><label class="bold-label">Job Title</label></b-col>
+                <b-col><input type="text" v-model="workData.jobTitle" /></b-col>
+                <b-col><label class="example-label">Developer</label></b-col>
             </b-form-row> 
+            <b-form-row class="input-form">
+                <b-col><label class="bold-label">Job Description</label></b-col>
+                <b-col><input type="text" v-model="workData.jobDescr" /></b-col>
+                <b-col><label class="example-label">Build the Front End</label></b-col>
+            </b-form-row>    
+            <b-form-row class="input-form">
+                <b-col><label class="bold-label">Job Pay</label></b-col>
+                <b-col><input type="text" v-model="workData.jobPay" /></b-col>
+                <b-col><label class="example-label">$75,000 yr</label></b-col>
+            </b-form-row>                          
             <div class="centerButton">
                 <b-button variant="success" type="submit" size="sm" @click="updateState">Continue</b-button>
             </div>              
-        </dev>
+        </div>
     </section>
 </template>
+
+<script>
+export default {
+    data(){
+        return{
+            workData:{
+                jobName:"",
+                jobAddress:"",
+                jobCity:"",
+                jobZipCode:"",
+                jobTitle:"",
+                jobDescr:"",
+                jobPay:"",
+            }
+        }
+    },
+    methods:{
+        updateState(){
+            this.$emit("update:work-info", this.workData);
+        }
+    }
+}
+</script>
 
 <style>
     .centerButton {
