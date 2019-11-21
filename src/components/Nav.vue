@@ -3,7 +3,7 @@
         <b-row id="nav-section" class="nav-bar">
             <b-col class="bold-label">Front-End Job Application</b-col>
             <b-col>Section: {{section.toUpperCase()}}</b-col>
-            <b-col class="bold-label">{{completed}} of 3</b-col>
+            <b-col class="bold-label">{{completed}} of 4</b-col>
         </b-row>        
     </b-container>
 </template>
