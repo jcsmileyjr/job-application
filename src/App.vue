@@ -6,6 +6,7 @@
         <Personal @update:personal-info="updatePersonal" />  
       </b-row>
       <b-row v-if="currentView ==='work'"><Work @update:work-info="updateWork" /></b-row>
+      <b-row v-if="currentView ==='skills'"><Skills @update:skills-info="updateSkills" /></b-row>
     </b-container>    
   </div>
 </template>
@@ -14,6 +15,7 @@
 import Nav from '@/components/Nav.vue';
 import Personal from '@/components/Personal.vue';
 import Work from '@/components/Work.vue';
+import Skills from '@/components/Skills.vue';
 
 export default {
   name: 'app',
@@ -21,23 +23,33 @@ export default {
     Nav,
     Personal,
     Work,
+    Skills,
   },
   data(){
     return{
       peronalData:{},
       workData:{},
-      currentView:"work",
-      pages:2,
+      skillsData:{},
+      currentView:"personal",
+      pages:1,
     }
   },
   methods:{
     updatePersonal(data){
       this.peronalData = data;
+      this.currentView = "work";
+      this.pages = 2;
     },
 
     updateWork(data){
       this.workData = data;
-    }
+      this.currentView = "skills";
+      this.pages = 3;
+    },
+
+    updateSkills(data){
+      this.skillsData = data;
+    }    
   }
 }
 </script>

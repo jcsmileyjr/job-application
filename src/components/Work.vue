@@ -58,6 +58,7 @@ export default {
             }
         }
     },
+    name: "work",
     methods:{
         updateState(){
             this.$emit("update:work-info", this.workData);
