@@ -30,17 +30,21 @@ export default {
       peronalData:{},
       workData:{},
       skillsData:{},
-      currentView:"skills",
-      pages:3,
+      currentView:"personal",
+      pages:1,
     }
   },
   methods:{
     updatePersonal(data){
       this.peronalData = data;
+      this.currentView = "work";
+      this.pages = 2;
     },
 
     updateWork(data){
       this.workData = data;
+      this.currentView = "skills";
+      this.pages = 3;
     },
 
     updateSkills(data){

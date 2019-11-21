@@ -4,22 +4,22 @@
             <b-form-row class="input-form">
                 <b-col><label class="bold-label">Front-End Skill</label></b-col>
                 <b-col><input type="text" v-model="skillsData.feSkills" /></b-col>
-                <b-col><label class="example-label">Coders Delight</label></b-col>
+                <b-col><label class="example-label">Vue</label></b-col>
             </b-form-row>    
             <b-form-row class="input-form">
                 <b-col><label class="bold-label">Back-End Skills</label></b-col>
                 <b-col><input type="text" v-model="skillsData.beSkills" /></b-col>
-                <b-col><label class="example-label">Coders Bay</label></b-col>
+                <b-col><label class="example-label">.Net</label></b-col>
             </b-form-row>
             <b-form-row class="input-form">
                 <b-col><label class="bold-label">Database Skill</label></b-col>
                 <b-col><input type="text" v-model="skillsData.dbSkills" /></b-col>
-                <b-col><label class="example-label">Coders</label></b-col>
+                <b-col><label class="example-label">MongoDB</label></b-col>
             </b-form-row>    
             <b-form-row class="input-form">
                 <b-col><label class="bold-label">Dev-Ops Skill</label></b-col>
                 <b-col><input type="text" v-model="skillsData.doSkills" /></b-col>
-                <b-col><label class="example-label">01010</label></b-col>
+                <b-col><label class="example-label">Microsoft Google Platform</label></b-col>
             </b-form-row>                           
             <div class="centerButton">
                 <b-button variant="success" type="submit" size="sm" @click="updateState">Continue</b-button>
@@ -71,9 +71,9 @@ export default {
         color: grey;
     }
 
-    #work {
+    #skills {
         background-color: white;
-        padding: 2rem;
+        padding: 1rem;
         margin-bottom: 1rem;
     }
 
@@ -82,3 +82,4 @@ export default {
             font-size: .8rem;
         }
     }
+</style>
