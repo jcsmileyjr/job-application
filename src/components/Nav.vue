@@ -2,7 +2,9 @@
     <b-container fluid >
         <b-row id="nav-section" class="nav-bar">
             <b-col class="bold-label">Front-End Job Application</b-col>
-            <b-col>Section: {{section.toUpperCase()}}</b-col>
+            <b-col v-if="section=='personal'">PERSONAL INFORMATION</b-col>
+            <b-col v-if="section=='work'">WORK HISTORY</b-col>
+            <b-col v-if="section=='skills'">PROFESSIONAL SKILLS</b-col>
             <b-col class="bold-label">{{completed}} of 4</b-col>
         </b-row>        
     </b-container>
@@ -33,10 +35,15 @@ export default {
     }
 
     .nav-bar {
-        height: 3rem;
+        padding-bottom: 2%;
+        padding-top: 2%;
         border-bottom: 1px solid black;
         margin-bottom: 1rem;
         background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
   @media only screen and (max-width: 550px) {
